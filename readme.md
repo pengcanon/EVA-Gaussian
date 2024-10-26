@@ -1,6 +1,7 @@
 # EVA-Gaussian: 3D Gaussian-Based Real-time Human Novel View Synthesis Under Diverse Camera Settings
 
 Welcome to the official code repository for **EVA-Gaussian**! This project implements the methods proposed in the paper "EVA-Gaussian: 3D Gaussian-Based Real-time Human Novel View Synthesis Under Diverse Camera Settings."
+project page: https://zhenliuzju.github.io/huyingdong/EVA-Gaussian
 
 ## Project Overview
 

@@ -1,0 +1,15 @@
+name: 'pretrain'
+
+lr: 0.0002
+wdecay: 1e-5
+batch_size: 6
+num_steps: 100000
+
+dataset:
+  anchor: False
+  source_id: [0, 1]
+  data_root: 'your path to dataset'
+
+record:
+  loss_freq: 200
+  eval_freq: 5000

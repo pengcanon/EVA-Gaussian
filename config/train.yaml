@@ -1,0 +1,19 @@
+name: 'train_EVAGaussian'
+
+stage1_ckpt: 'path to your pretrained model'
+lr: 0.0005
+wdecay: 1e-5
+batch_size: 2
+num_steps: 100000
+
+dataset:
+  anchor: False
+  source_id: [0, 1]
+  train_novel_id: [2, 3, 4]
+  val_novel_id: [3]
+  use_hr_img: False
+  data_root: 'your path to dataset'
+
+record:
+  loss_freq: 200
+  eval_freq: 2000

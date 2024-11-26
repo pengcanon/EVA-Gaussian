@@ -180,8 +180,8 @@ class DepthHumanDataset(Dataset):
         img_name = self.img_path % (sample_name, source_id_0)
         mask_name = self.mask_path % (sample_name, source_id_0)
         depth_name = self.depth_path % (sample_name, source_id_0)
-        intr_name = self.intr_path % (sample_name, source_id_1)
-        extr_name = self.extr_path % (sample_name, source_id_1)
+        intr_name = self.intr_path % (sample_name, source_id_0)
+        extr_name = self.extr_path % (sample_name, source_id_0)
         
         try:
             intr_0, extr_0 = np.load(intr_name), np.load(extr_name)

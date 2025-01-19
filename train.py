@@ -81,7 +81,7 @@ class Trainer:
             L1_temp = l2_loss(render_novel_temp,gt_novel)
             Lssim_temp = 1.0 - ssim(render_novel_temp, gt_novel)
             
-            loss = depth_loss + 0.8 * (L1_temp) + 0.2 * (Lssim_temp) + L_o_r + L_s_r + (10**3)*L_anchor
+            loss = depth_loss + 0.8 * (L1_temp+L1) + 0.2 * (Lssim_temp+Lssim) + L_o_r + L_s_r + (10**3)*L_anchor
 
             if self.total_steps and self.total_steps % self.cfg.record.loss_freq == 0:
                 image = torchvision.utils.make_grid(render_novel[0]) 

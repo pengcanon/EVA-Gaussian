@@ -120,10 +120,10 @@ class Trainer:
                     one_per = (epe < 0.01*torch.max(data[view]['depth']))
                     
                     epe_list.append(epe.mean().item())
-                    one_per_list.append(one_per.float().mean().item())
+                    one_pix_list.append(one_per.float().mean().item())
 
         val_epe = np.round(np.mean(np.array(epe_list)), 4)
-        val_one_per = np.round(np.mean(np.array(one_per_list)), 4)
+        val_one_per = np.round(np.mean(np.array(one_pix_list)), 4)
         logging.info(f"Validation Metrics ({self.total_steps}): epe {val_epe}, 1per {val_one_per}")
         self.logger.write_dict({'val_epe': val_epe, 'val_1per': val_one_per}, write_step=self.total_steps)
         torch.cuda.empty_cache()

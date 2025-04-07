@@ -2,13 +2,13 @@ name: 'pretrain'
 
 lr: 0.0002
 wdecay: 1e-5
-batch_size: 6
+batch_size: 2
 num_steps: 100000
 
 dataset:
   anchor: False
   source_id: [0, 1]
-  data_root: 'your path to dataset'
+  data_root: 'datasets/GPSdata'
 
 record:
   loss_freq: 200
